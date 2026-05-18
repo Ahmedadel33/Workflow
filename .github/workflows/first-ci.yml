@@ -1,0 +1,17 @@
+name: first-ci
+
+on: push
+
+jobs:
+  execute-workflow:
+    runs-on: ubuntu-latest
+    
+    steps:
+       - name: Checkout repository files
+         uses: actions/checkout@v4
+        
+       - name: List all repository files
+         run: ls -la
+        
+       - name: Print the content of README.md
+         run: cat README.md
